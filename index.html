@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html ng-app="TeamDashboard">
+  <head>
+    <title>Team Dashboard</title>
+
+    <!-- <%= stylesheet_link_tag application %> -->
+    <link href="vendor/stylesheets/jquery.gridster.css" rel="stylesheet" />
+    <link href="stylesheets/widgets/alert/style.css" rel="stylesheet" />
+    <link href="stylesheets/widgets/boolean/style.css" rel="stylesheet" />
+    <link href="stylesheets/widgets/ci/style.css" rel="stylesheet" />
+    <link href="stylesheets/widgets/example/style.css" rel="stylesheet" />
+    <link href="stylesheets/widgets/exception_tracker/style.css" rel="stylesheet" />
+    <link href="stylesheets/widgets/graph/style.css" rel="stylesheet" />
+    <link href="stylesheets/widgets/meter/style.css" rel="stylesheet" />
+    <link href="stylesheets/widgets/number/style.css" rel="stylesheet" />
+    <link href="stylesheets/widgets/status_table/style.css" rel="stylesheet" />
+    <link href="stylesheets/application.css" rel="stylesheet" />
+
+    <!-- <%= csrf_meta_tag %> -->
+
+    <!-- angular.js at the bottom, define "ng-cloak" css yourself  -->
+    <style type="text/css">
+      [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+          display: none !important;
+      }
+    </style>
+
+  </head>
+
+  <body ng-controller="MainCtrl" ng-cloak>
+
+    <div class="navbar navbar-static-top" ng-hide='minimalui'>
+     <div class="navbar-inner">
+       <div class="container">
+         <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+         </a>
+         <a class="brand" href="/">Fork Team Dashboard</a>
+         <div class="nav-collapse">
+           <ul class="nav">
+             <li><a href="/#/dashboards">Dashboards</a></li>
+             <li><a href="/#/about">About</a></li>
+           </ul>
+         </div>
+       </div>
+     </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div id="flash"></div>
+
+        <div ng-class="{ 'alert-show': !resolved }" class="alert alert-info" ng-cloak>
+          <img src="images/spinner2.gif"> &nbsp;Loading
+        </div>
+
+      </div>
+      <div class="row-fluid">
+        <div id="main" class="span12">
+          <div ng-view ng-show="resolved" ng-cloak></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="fullscreen-notification" class="text-modal fade hide">
+      <h1>Press ESC to exit fullscreen.</h1>
+    </div>
+
+    <!-- <%= script_tag_for_all_custom_fields %> -->
+
+    <!-- <%= javascript_include_tag application %> -->
+    <script src="vendor/javascripts/underscore.js"></script>
+    <script src="vendor/javascripts/jquery.js"></script>
+    <script src="vendor/javascripts/jquery_ujs.js"></script>
+    <script src="vendor/javascripts/jquery.gridster.js"></script>
+    <script src="vendor/javascripts/bootstrap-dropdown.js"></script>
+    <script src="vendor/javascripts/bootstrap-typeahead.js"></script>
+    <script src="vendor/javascripts/bootstrap-modal.js"></script>
+    <script src="vendor/javascripts/bootbox.js"></script>
+    <script src="vendor/javascripts/bigscreen.min.js"></script>
+    <script src="vendor/javascripts/flotr2.js"></script>
+    <script src="vendor/javascripts/moment.min.js"></script>
+    <script src="vendor/javascripts/jquery.timeago.js"></script>
+    <script src="vendor/javascripts/jquery.timeago.en-short.js"></script>
+    <script src="vendor/javascripts/jquery.knob.js"></script>
+    <script src="vendor/javascripts/angular.js"></script>
+    <script src="vendor/javascripts/angular-route.js"></script>
+    <script src="vendor/javascripts/angular-resource.js"></script>
+    <script src="vendor/javascripts/angular-sanitize.js"></script>
+    <script src="vendor/javascripts/ui-bootstrap-custom-0.5.0.js"></script>
+
+    <script src="javascripts/app.js"></script>
+    <script src="javascripts/controllers/about_ctrl.js"></script>
+    <script src="javascripts/controllers/dashboard_index_ctrl.js"></script>
+    <script src="javascripts/controllers/dashboard_show_ctrl.js"></script>
+    <script src="javascripts/controllers/main_ctrl.js"></script>
+    <script src="javascripts/controllers/targets_ctrl.js"></script>
+    <script src="javascripts/controllers/widget_ctrl.js"></script>
+    <script src="javascripts/controllers/widget_edit_ctrl.js"></script>
+    <script src="javascripts/directives/autocomplete.js"></script>
+    <script src="javascripts/directives/bind_html_unsafe.js"></script>
+    <script src="javascripts/directives/blank_on_escape.js"></script>
+    <script src="javascripts/directives/contenteditable.js"></script>
+    <script src="javascripts/directives/gridster.js"></script>
+    <script src="javascripts/directives/td_field.js"></script>
+    <script src="javascripts/directives/widget.js"></script>
+    <script src="javascripts/filters/metrics_prefix.js"></script>
+    <script src="javascripts/filters/percentage.js"></script>
+    <script src="javascripts/services/color_factory.js"></script>
+    <script src="javascripts/services/dashboard.js"></script>
+    <script src="javascripts/services/editor_form_options.js"></script>
+    <script src="javascripts/services/flotr_graph_helper.js"></script>
+    <script src="javascripts/services/fullscreen.js"></script>
+    <script src="javascripts/services/sources.js"></script>
+    <script src="javascripts/services/suffix_formatter.js"></script>
+    <script src="javascripts/services/system.js"></script>
+    <script src="javascripts/services/time_selector.js"></script>
+    <script src="javascripts/services/widget.js"></script>
+    <script src="javascripts/widgets/alert/controller.js"></script>
+    <script src="javascripts/widgets/alert/directive.js"></script>
+    <script src="javascripts/widgets/alert/service.js"></script>
+    <script src="javascripts/widgets/boolean/controller.js"></script>
+    <script src="javascripts/widgets/boolean/directive.js"></script>
+    <script src="javascripts/widgets/boolean/service.js"></script>
+    <script src="javascripts/widgets/ci/controller.js"></script>
+    <script src="javascripts/widgets/ci/directive.js"></script>
+    <script src="javascripts/widgets/ci/service.js"></script>
+    <script src="javascripts/widgets/example/controller.js"></script>
+    <script src="javascripts/widgets/example/directive.js"></script>
+    <script src="javascripts/widgets/example/filter.js"></script>
+    <script src="javascripts/widgets/example/service.js"></script>
+    <script src="javascripts/widgets/exception_tracker/controller.js"></script>
+    <script src="javascripts/widgets/exception_tracker/directive.js"></script>
+    <script src="javascripts/widgets/exception_tracker/service.js"></script>
+    <script src="javascripts/widgets/graph/controller.js"></script>
+    <script src="javascripts/widgets/graph/directive.js"></script>
+    <script src="javascripts/widgets/graph/service.js"></script>
+    <script src="javascripts/widgets/graphite/controller.js"></script>
+    <script src="javascripts/widgets/graphite/directive.js"></script>
+    <script src="javascripts/widgets/graphite/service.js"></script>
+    <script src="javascripts/widgets/meter/controller.js"></script>
+    <script src="javascripts/widgets/meter/directive.js"></script>
+    <script src="javascripts/widgets/number/controller.js"></script>
+    <script src="javascripts/widgets/number/directive.js"></script>
+    <script src="javascripts/widgets/number/service.js"></script>
+    <script src="javascripts/widgets/status_table/controller.js"></script>
+    <script src="javascripts/widgets/status_table/directive.js"></script>
+    <script src="javascripts/widgets/status_table/service.js"></script>
+    <script src="javascripts/application.js"></script>
+
+    <!-- <%= script_tag_for_all_templates %> -->
+    <script src="http://localhost:3000/api/system/info?format=jsonp"></script>
+  </body>
+</html>

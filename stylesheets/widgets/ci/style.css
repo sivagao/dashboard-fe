@@ -1,0 +1,26 @@
+.ci .ci-value {
+  float: left;
+  margin-right: 10px;
+  margin-top: 10px;
+  width: 70px;
+  height: 60px; }
+  .ci .ci-value.building {
+    background-repeat: no-repeat;
+    background-position: 20px 14px; }
+    .ci .ci-value.building.red {
+      background-image: image-url("spinner-red-bg.gif"); }
+    .ci .ci-value.building.green {
+      background-image: image-url("spinner-green-bg.gif"); }
+    .ci .ci-value.building.gray {
+      background-image: image-url("spinner-gray-bg.gif"); }
+.ci .red {
+  background: #D26771;
+  border: 2px solid #c94854; }
+.ci .green {
+  background: #8ec15c;
+  border: 2px solid #75a93f; }
+.ci .gray {
+  background: #ccc;
+  border: 2px solid #b3b3b3; }
+
+/*# sourceMappingURL=style.css.map */

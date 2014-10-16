@@ -1,0 +1,60 @@
+.status_table-widget .status_table-overall_value {
+  float: left;
+  width: 70px;
+  height: 60px;
+  margin-top: 10px;
+  margin-right: 20px;
+  font-size: 22px;
+  line-height: 60px;
+  font-weight: bolder;
+  text-shadow: 1px 1px 1px #330, -1px -1px 1px #330;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+.status_table-widget .status_table-overall_label {
+  float: left;
+  height: 60px;
+  margin-top: 10px;
+  margin-right: 20px;
+  font-size: 22px;
+  line-height: 60px;
+  font-weight: bolder;
+  text-shadow: 1px 1px 1px #330, -1px -1px 1px #330;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+.status_table-widget .status_table-value {
+  float: left;
+  width: 20px;
+  height: 20px;
+  margin-top: 10px;
+  margin-right: 20px; }
+.status_table-widget .file_label {
+  position: relative;
+  margin-top: 10px;
+  float: left;
+  width: 95%;
+  height: 75%;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: bolder;
+  text-shadow: 1px 1px 1px #330, -1px -1px 1px #330;
+  background: 0;
+  color: #ccc;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+.status_table-widget .red {
+  background: #D26771;
+  border: 2px solid #c94854; }
+.status_table-widget .green {
+  background: #8ec15c;
+  border: 2px solid #75a93f; }
+.status_table-widget .blue {
+  background: #447ab2;
+  border: 2px solid #213b56; }
+.status_table-widget .orange {
+  background: #f89406;
+  border: 2px solid #945804; }
+
+/*# sourceMappingURL=style.css.map */

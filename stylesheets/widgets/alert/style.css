@@ -1,0 +1,34 @@
+.alert-widget .alert-value {
+  float: left;
+  width: 70px;
+  height: 60px;
+  margin-top: 10px;
+  margin-right: 20px; }
+.alert-widget .label {
+  margin-top: 10px;
+  float: left;
+  width: 500px;
+  height: 62px;
+  font-size: 19px;
+  line-height: 15px;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #330, -1px -1px 1px #330;
+  background: 0;
+  color: #ccc;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+.alert-widget .red {
+  background: #D26771;
+  border: 2px solid #c94854; }
+.alert-widget .green {
+  background: #8ec15c;
+  border: 2px solid #75a93f; }
+.alert-widget .blue {
+  background: #447ab2;
+  border: 2px solid #213b56; }
+.alert-widget .orange {
+  background: #f89406;
+  border: 2px solid #945804; }
+
+/*# sourceMappingURL=style.css.map */

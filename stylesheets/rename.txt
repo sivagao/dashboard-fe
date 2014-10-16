@@ -1,0 +1,12 @@
+mv application.css.scss application.scss
+mv custom_variables.scss custom_variables.scss
+mv style.css.scss style.scss
+mv widgets/alert/style.css.scss widgets/alert/style.scss
+mv widgets/boolean/style.css.scss widgets/boolean/style.scss
+mv widgets/ci/style.css.scss widgets/ci/style.scss
+mv widgets/example/style.css.scss widgets/example/style.scss
+mv widgets/exception_tracker/style.css.scss widgets/exception_tracker/style.scss
+mv widgets/graph/style.css.scss widgets/graph/style.scss
+mv widgets/meter/style.css.scss widgets/meter/style.scss
+mv widgets/number/style.css.scss widgets/number/style.scss
+mv widgets/status_table/style.css.scss widgets/status_table/style.scss
